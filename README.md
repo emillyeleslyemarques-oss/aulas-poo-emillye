@@ -18,3 +18,8 @@ acessiveis pelo menu de branches no GitHub.
 - Propriedades e métodos
 - Tipos de dados
 - Uso do $this para acessar recursos de dentro da própria classe
+
+- Visibilidade de propriedade public e private
+- Encapsulamento
+- Métodos Getter para a leitura
+- Métodos Setters para a escrita
