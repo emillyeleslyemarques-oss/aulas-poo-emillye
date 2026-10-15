@@ -8,3 +8,8 @@ acessiveis pelo menu de branches no GitHub.
 ---
 
 ## Branch 01: Classes, Objetos, Propriedades e Métodos
+- Assuntos estudados
+- Classes e Objetos
+- Propriedades e métodos
+- Tipos de dados
+- Uso do $this para acessar recursos de dentro da própria classe
