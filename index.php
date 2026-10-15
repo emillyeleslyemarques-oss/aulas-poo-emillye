@@ -5,10 +5,19 @@ require_once "src/Filme.php";
 
 //criando um OBJETO ou uma INSTANCIA a partir da CLASSE FILME
 $filme1 = new Filme();
+$filme1->titulo = "De volta para o Futuro";
+$filme1->ano = 1984;
+$filme1->genero = "Ficção Científica";
 
 $filme2 = new Filme();
+$filme2->titulo = "Toy Story";
+$filme2->ano = 1995;
+$filme2->genero = "Animação";
 
 $filme3 = new Filme();
+$filme3->titulo = "O Auto da Compadecida";
+$filme3->ano = 2000;
+$filme3->genero = "Comédia";
 
 echo "<pre>";
 var_dump($filme1, $filme2, $filme3);
