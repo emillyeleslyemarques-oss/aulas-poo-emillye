@@ -1,3 +1,15 @@
+<?php
+//importando a classe
+require_once "src/Filme.php";
+
+
+//criando um OBJETO ou uma INSTANCIA a partir da CLASSE FILME
+$filme1 = new Filme();
+
+echo "<pre>";
+var_dump($filme1);
+echo "</pre>";
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,7 +31,7 @@
         <div class="filmes">
 
             <article>
-
+                 
             </article>
 
         </div>
@@ -29,7 +41,7 @@
         <div class="assuntos-estudados">
             <h2>Assuntos estudados</h2>
             <ul>
-
+                 
             </ul>
         </div>
 
