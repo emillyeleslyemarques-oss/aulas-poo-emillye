@@ -49,6 +49,11 @@ echo "</pre>"; */
                  <span class="genero"><?= $filme->genero ?></span>
                  <h2><?= $filme->titulo ?></h2>
                  <p class="ano">Lançamento: <?= $filme->ano ?></p>
+
+                 <?php if($filme->ehClassico()):?>
+                    <span class="classico">Clássico</span>
+                 <?php endif; ?>
+                 
             </article>
          <?php endforeach; ?>   
         </div>
