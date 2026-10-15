@@ -8,7 +8,8 @@ acessiveis pelo menu de branches no GitHub.
 ---
 
 ## Branch 01: Classes, Objetos, Propriedades e Métodos
-- Assuntos estudados
+
+### Assuntos estudados
 - Classes e Objetos
 - Propriedades e métodos
 - Tipos de dados
