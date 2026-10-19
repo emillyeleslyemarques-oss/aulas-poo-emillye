@@ -63,10 +63,7 @@ echo "</pre>"; */
         <div class="assuntos-estudados">
             <h2>Assuntos estudados</h2>
             <ul>
-                <li>Visibilidade de propriedade <b>public</b> e <b>private</b></li>
-                <li>Encapsulamento</li>
-                <li>Métodos <b>Getter</b> para a leitura</li>
-                <li>Métodos <b>Setters</b> para a escrita</li>
+              
             </ul>
         </div>
 
