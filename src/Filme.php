@@ -42,7 +42,9 @@ class Filme
     }
 
      public function setAno(int $ano): void
-    {         //propriedade         
-       $this->ano = $ano;
+    {         //propriedade
+       if($ano > 0){      
+         $this->ano = $ano;
+       } 
     }
 }
