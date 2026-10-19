@@ -17,6 +17,8 @@ class Filme
       $this->titulo = $titulo;
       $this->genero = $genero;
       // $this->ano = $ano;
+      
+      // Podemos ou devemos usar os setters atraves do contructor
       $this->setAno($ano);
     }
     
