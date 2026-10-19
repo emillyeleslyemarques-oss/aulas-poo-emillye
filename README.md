@@ -23,3 +23,10 @@ acessiveis pelo menu de branches no GitHub.
 - Encapsulamento
 - Métodos Getter para a leitura
 - Métodos Setters para a escrita
+
+- finalidade do construtor
+- Implementação do metodo __construct
+- Parâmetros/argumentos do construtor
+- Passagem de dados/valores ao criar objetos
+- Atribuição de valores para as propriedades usando o construtor
+- Uso de setter a partir do contructor

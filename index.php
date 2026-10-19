@@ -53,7 +53,12 @@ echo "</pre>"; */
         <div class="assuntos-estudados">
             <h2>Assuntos estudados</h2>
             <ul>
-              
+              <li>finalidade do construtor</li>
+              <li>Implementação do metodo <b>__construct</b></li>
+              <li>Parâmetros/argumentos do construtor</li>
+              <li>Passagem de dados/valores ao criar objetos</li>
+              <li>Atribuição de valores para as propriedades usando o construtor</li>
+              <li>Uso de <b>setter</b> a partir do contructor</li>
             </ul>
         </div>
 
