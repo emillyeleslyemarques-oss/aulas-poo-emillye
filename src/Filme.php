@@ -16,7 +16,8 @@ class Filme
       // Atribuindo os valores recebidos pelos parametros as propriedades
       $this->titulo = $titulo;
       $this->genero = $genero;
-      $this->ano = $ano;
+      // $this->ano = $ano;
+      $this->setAno($ano);
     }
     
     public function ehClassico(): bool
