@@ -3,21 +3,11 @@
 require_once "src/Filme.php";
 
 
-//criando um OBJETO ou uma INSTANCIA a partir da CLASSE FILME
-$filme1 = new Filme();
-$filme1->setTitulo("De Volta para o Futuro");
-$filme1->setAno(1984);
-$filme1->setGenero("Ficção Científica");
+//criando um OBJETO e passando os dados para o construtor
+$filme1 = new Filme('De volta para o fututo1','ficção', 1985 );
+$filme2 = new Filme('Toy Story', 'Animação', 1995);
+$filme3 = new Filme('Homem Aranha', 'Ação', 2026);
 
-$filme2 = new Filme();
-$filme2->setTitulo("Toy Story");
-$filme2->setAno(1995) ;
-$filme2->setGenero("Animação") ;
-
-$filme3 = new Filme();
-$filme3->setTitulo("O Auto da Compadecida") ;
-$filme3->setAno(2000) ;
-$filme3->setGenero("Comédia")  ;
 
 $filmes = [$filme1, $filme2, $filme3];
 
