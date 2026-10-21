@@ -5,7 +5,9 @@ Neste repositorio utilizaremos o PHP com **Programção Orientada a Objetos**
 os assuntos e exemplos estão divididos po `branches`,
 acessiveis pelo menu de branches no GitHub.
 
+ ## Branch 04: Herança
 
+ ---
 ## Branch 03: Método construtor
 - finalidade do construtor
 - Implementação do metodo __construct
