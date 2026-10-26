@@ -22,4 +22,9 @@ class Serie extends Conteudo
   {
     $this->temporadas = $temporadas;
   }
+
+  public function getDescricao(): string 
+    {
+        return "A série" .$this->getTitulo(). "possui $this->temporadas temporadas.";
+    }
 } 

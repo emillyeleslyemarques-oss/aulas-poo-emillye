@@ -22,9 +22,9 @@ $filmes = [$filme1, $filme2, $filme3];
 
 
 
-echo "<pre>";
+/*echo "<pre>";
 var_dump($serie1, $serie2);
-echo "<pre/>";
+echo "<pre/>";*/
  /* echo "<pre>";
 var_dump($filme1, $filme2, $filme3);
 echo "</pre>"; */ 

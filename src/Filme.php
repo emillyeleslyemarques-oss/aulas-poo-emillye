@@ -18,5 +18,10 @@ class Filme extends Conteudo
       $this->duracao = $duracao;
     }
 
+ 
+    public function getDescricao(): string 
+    {
+        return "O filme" .$this->getTitulo(). "possui $this->duracao minutos de duração.";
+    }
 
 }
