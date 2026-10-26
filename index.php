@@ -18,8 +18,11 @@ $serie1 = new Serie ('Diario de um vampiro', 'drama', 2009, 8);
 $serie2 = new Serie ('Originais', 'drama', 2015, 5);
 
 
-$filmes = [$filme1, $filme2, $filme3];
-$serie = [$serie1, $serie2];
+//$filmes = [$filme1, $filme2, $filme3];
+//$serie = [$serie1, $serie2];
+
+//objetos filmes e series
+$conteudos = [$filme1, $filme2, $serie1, $serie2];
 
 /* Como a classe Conteudo foi definida como abstrata, a linha abaixo
 não funcionara pois não é ppossivel criar objetos/instancias diretamente
@@ -27,7 +30,7 @@ não funcionara pois não é ppossivel criar objetos/instancias diretamente
 //$conteudo = new Conteudo('Senhor dos anéis', 'Fantasia', 2001);
 //var_dump($conteudo);
 
- 
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -47,14 +50,16 @@ não funcionara pois não é ppossivel criar objetos/instancias diretamente
             <p>Três filmes para descobrir, rever e se divertir</p>
         </header>
 
-        <div class="filmes">
-         <?php foreach($filmes as $filme): ?>
-            <article class="card-filme">
-                 <span class="genero"><?= $filme->getGenero() ?></span>
-                 <h2><?= $filme->getTitulo() ?></h2>
-                 <p class="ano">Lançamento: <?= $filme->getAno() ?></p>
+        <div class="conteudos">
+         <?php foreach($conteudos as $conteudo): ?>
+            <article class="card-conteudo">
+                 <span class="genero"><?= $conteudo->getGenero() ?></span>
+                 <h2><?= $conteudo->getTitulo() ?></h2>
+                 <p class="ano">Lançamento: <?= $conteudo->getAno() ?></p>
 
-                 <?php if($filme->ehClassico()):?>
+                 <p> <?= $conteudo->getDescricao() ?></p>
+
+                 <?php if($conteudo->ehClassico()):?>
                     <span class="classico">Clássico</span>
                  <?php endif; ?>
 
