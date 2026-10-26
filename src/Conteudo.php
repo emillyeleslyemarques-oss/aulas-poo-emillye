@@ -2,7 +2,7 @@
 //src/Conteudo.php
 
 //É uma superclasse que compartilha recursos com outras classes (subclasses)
-class Conteudo
+ abstract class Conteudo
 {
   //Propriedade: caracteristicas 
 
