@@ -19,15 +19,15 @@ $serie2 = new Serie ('Originais', 'drama', 2015, 5);
 
 
 $filmes = [$filme1, $filme2, $filme3];
+$serie = [$serie1, $serie2];
 
+/* Como a classe Conteudo foi definida como abstrata, a linha abaixo
+não funcionara pois não é ppossivel criar objetos/instancias diretamente
+á partir de classes abstratas */
+//$conteudo = new Conteudo('Senhor dos anéis', 'Fantasia', 2001);
+//var_dump($conteudo);
 
-
-/*echo "<pre>";
-var_dump($serie1, $serie2);
-echo "<pre/>";*/
- /* echo "<pre>";
-var_dump($filme1, $filme2, $filme3);
-echo "</pre>"; */ 
+ 
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
