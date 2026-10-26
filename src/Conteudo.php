@@ -19,10 +19,15 @@
       $this->titulo = $titulo;
       $this->genero = $genero;
       // $this->ano = $ano;
-      
       // Podemos ou devemos usar os setters atraves do contructor
       $this->setAno($ano);
     }
+
+    /* Criamos um contrato, uma obrigatoriedade para as subclasses.
+    Ou seja, elas serão OBRIGADAS a implementar este método */
+    //declarando metodo abstrato
+    abstract public function getDescricao(): string;
+
     public function ehClassico(): bool
     { 
        return $this->ano < 2000;
