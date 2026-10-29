@@ -31,5 +31,18 @@ class Pedido
         return $this->status;
     }
 
-    public 
+    public function setNumero(int $numero): void
+    {
+        $this->numero = $numero;
+    }
+
+    public function setCliente(string $cliente): void
+    {
+        $this->cliente = $cliente;
+    }
+
+    public function setStatus(StatusPedido $status): void
+    {
+        $this->status = $status;
+    }
 }
