@@ -38,7 +38,7 @@ não funcionara pois não é ppossivel criar objetos/instancias diretamente
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Coleção de Filmes</title>
+    <title>Minha Coleção de Filmes e Séries</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 
@@ -72,7 +72,11 @@ não funcionara pois não é ppossivel criar objetos/instancias diretamente
         <div class="assuntos-estudados">
             <h2>Assuntos estudados</h2>
             <ul>
-             
+              <li>Classe abstrata: <b>Conteudo</b></li>
+              <li>Impossibilita de instaciar diretamente uma classe abstrata</li>
+              <li>Método abstrato: <b>getDescricao</b></li>
+              <li>Obriga a implementação do método absrato pelas classes filhas Filme e Serie</li>
+              <li>Polimorfismo: a mesma chmada a <b>getDescricao()</b> utiliza a implementação de cada classe</li>
             </ul>
         </div>
 
