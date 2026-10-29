@@ -59,7 +59,12 @@ $pedidos = [$pedido1, $pedido2, $pedido3, $pedido4];
         <h2>Assuntos estudados</h2>
         
     </div>
-
+        <ul>
+            <li>Enumerações com um conjunto definido de opções usando <b>case</b></li>
+            <li>Casos associados a valores do tipo <b>string</b> </li>
+            <li>Acesso a um caso com <b>StatusPedido::NomeCaso</b></li>
+            <li>Acesso ao valor/texto do caso com <b>->value</b></li>
+        </ul>
     </div>
 </body>
 
