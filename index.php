@@ -12,6 +12,7 @@ $pedido1 = new Pedido(1001, "Fulano da Silva", StatusPedido::Pendente);
 $pedido2 = new Pedido(1002, "Beltrano Souza", StatusPedido::Pendente);
 $pedido3 = new Pedido(1003, "José da Silva", StatusPedido::AguardandoPagamento);
 $pedido4 = new Pedido(1004, "Mônica Santos", StatusPedido::SaiuParaEntrega);
+$pedido3->setStatus(StatusPedido::Pago);
 
 $pedidos = [$pedido1, $pedido2, $pedido3, $pedido4];
 ?>
@@ -36,9 +37,19 @@ $pedidos = [$pedido1, $pedido2, $pedido3, $pedido4];
 
         <div class="conteudos">        
         <?php foreach ($pedidos as $pedido): ?>
-            <article class="card-conteudo">
-                
-            </article>
+         <article class="card-conteudo">
+              <h2>Pedido # <?= $pedido->getNumero() ?></h2>
+              <p>Cliente: <?= $pedido->getCliente() ?></p>
+                            <!-- ATENÇÃO ao so necessario do VALUE para mostrar os valores -->
+              <p>Status:  
+                <b class="destaque"> <?=$pedido->getStatus()->value ?></b>
+              </p>
+        <?php 
+        $mensagem = 'Seu pedido #'.$pedido->getNumero().' está com o status:'.
+        $pedido->getStatus()->value;      
+        ?>
+            <p><small><?= $notificadorPorEmail->enviar($mensagem) ?></small></p>
+         </article>
         <?php endforeach; ?>
         </div>
 
