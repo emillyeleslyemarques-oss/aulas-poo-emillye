@@ -5,9 +5,22 @@ Neste repositorio utilizaremos o PHP com **Programção Orientada a Objetos**
 os assuntos e exemplos estão divididos po `branches`,
 acessiveis pelo menu de branches no GitHub.
 
+## Brach 07: Recursoso estáticos
+- Propriedades estaticas usando static
+- Métodos estaticos usando static
+- Acesso a recursos estaticos com ::
+- Acesso estaticos da propria classe usando self
+- Diferença entre usar recursos estaticos de classe e  recursos de objeto
+---
+## Branch 06:
+
+---
+## Branch 05:
+
+---
  ## Branch 04: Herança
 
- ---
+---
 ## Branch 03: Método construtor
 - finalidade do construtor
 - Implementação do metodo __construct

@@ -76,7 +76,11 @@ $notificadorPorEmailTeste3->enviar("Pedidos à espera de avaliação!");
     <div class="assuntos-estudados">
         <h2>Assuntos estudados</h2>
         <ul>
-          
+          <li>Propriedades estaticas usando <b>static</b></li>
+          <li>Métodos estaticos usando <b>static</b></li>
+          <li>Acesso a recursos estaticos com <b>::</b></li>
+          <li>Acesso estaticos da propria classe usando <b>self</b></li>
+          <li>Diferença entre usar recursos estaticos de classe e recursos de objeto </li>
         </ul>
     </div>
 
