@@ -1,36 +1,13 @@
-<?php
-//importando a superclasse
-require_once "src/Conteudo.php";
+<?php 
+require_once "src/Notificador.php"; // interface (vem primeiro)
+require_once "src/NotificadorEmail.php"; // classe
+require_once "src/NotificadorSMS.php"; // classe
 
-//importando a subclasse
-require_once "src/Filme.php";
+// Criando os objetos a partir das classes
+$notificadorPorEmail = new NotificadorEmail();
+$notificadorPorSMS = new NotificadorSMS();
 
-require_once "src/Serie.php";
-
-
-
-//criando um OBJETO e passando os dados para o construtor
-$filme1 = new Filme('De volta para o futuro','ficção', 1985, 116 );
-$filme2 = new Filme('Toy Story', 'Animação', 1995, 105);
-$filme3 = new Filme('Homem Aranha', 'Ação', 2026, 145);
-
-$serie1 = new Serie ('Diario de um vampiro', 'drama', 2009, 8);
-$serie2 = new Serie ('Originais', 'drama', 2015, 5);
-
-
-//$filmes = [$filme1, $filme2, $filme3];
-//$serie = [$serie1, $serie2];
-
-//objetos filmes e series
-$conteudos = [$filme1, $filme2, $serie1, $serie2];
-
-/* Como a classe Conteudo foi definida como abstrata, a linha abaixo
-não funcionara pois não é ppossivel criar objetos/instancias diretamente
-á partir de classes abstratas */
-//$conteudo = new Conteudo('Senhor dos anéis', 'Fantasia', 2001);
-//var_dump($conteudo);
-
-
+$notificadores = [$notificadorPorEmail, $notificadorPorSMS];
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -38,43 +15,44 @@ não funcionara pois não é ppossivel criar objetos/instancias diretamente
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Coleção de Filmes</title>
+    <title>Notificações da loja virtual</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 
 <body>
     <div class="container">
         <header>
-            <p class="destaque">Uma sessão de boas histórias</p>
-            <h1>Minha coleção de filmes</h1>
-            <p>Três filmes para descobrir, rever e se divertir</p>
+            <p class="destaque">Loja Virtual</p>
+            <h1>Notificações da loja virtual</h1>
+            <p>Simulação de notificações sobre pedidos por e-mail e SMS</p>
         </header>
 
-        <div class="conteudos">
-         <?php foreach($conteudos as $conteudo): ?>
+        <div class="conteudos">        
+        
+        <?php 
+            $conteudoDaMensagem = "Seu pedido '123abc' foi confirmado!";
+            foreach($notificadores as $notificador): 
+        ?>
             <article class="card-conteudo">
-                 <span class="genero"><?= $conteudo->getGenero() ?></span>
-                 <h2><?= $conteudo->getTitulo() ?></h2>
-                 <p class="ano">Lançamento: <?= $conteudo->getAno() ?></p>
-
-                 <p> <?= $conteudo->getDescricao() ?></p>
-
-                 <?php if($conteudo->ehClassico()):?>
-                    <span class="classico">Clássico</span>
-                 <?php endif; ?>
-
+                <h2>Notificação sobre o pedido:</h2>
+                <p> <?= $notificador->enviar($conteudoDaMensagem) ?> </p>
             </article>
-         <?php endforeach; ?>   
+        <?php endforeach; ?>
+
         </div>
 
-        <hr>
+        <hr>        
 
-        <div class="assuntos-estudados">
-            <h2>Assuntos estudados</h2>
-            <ul>
-             
-            </ul>
-        </div>
+    <div class="assuntos-estudados">
+        <h2>Assuntos estudados</h2>
+        <ul>
+            <li>Interface <b>Notificador</b> como um contrato de comportamentos (métodos)</li>
+            <li>Definição do método <b>enviar(string $mensagem): string</b> na Interface</li>
+            <li>Aplicação da interface com <b>implements</b> nas classes <b>NotificadorEmail</b> e <b>NotificadorSMS</b></li>
+            <li>Implementação do método <b>enviar</b> em cada classe</li>
+            <li>Polimorfismo: a mesma chamada a <b>enviar</b> utiliza a implementação de cada classe.</li>
+        </ul>
+    </div>
 
     </div>
 </body>
