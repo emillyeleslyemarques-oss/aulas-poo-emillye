@@ -15,6 +15,14 @@ $emailPedido2 = $notificadorPorEmail->enviar("Seu pedido 789xyz!");
 
 //Pedido 456asd
 $emailPedido3 = $notificadorPorEmail->enviar("Seu pedido 456asd foi confirmado!");
+
+/* ***************************** */
+$notificadorPorEmailTeste2 = new NotificadorEmail();
+$notificadorPorEmailTeste3 = new NotificadorEmail();
+
+$notificadorPorEmailTeste2->enviar("Pedidos entregues!");
+$notificadorPorEmailTeste3->enviar("Pedidos à espera de avaliação!");
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -55,7 +63,15 @@ $emailPedido3 = $notificadorPorEmail->enviar("Seu pedido 456asd foi confirmado!"
             </article>
         </div>
 
-        <hr>        
+        <hr>    
+        
+     <section class="card-conteudo">
+         <h2>Resumo total dos envios de notificações</h2>
+         <!-- Note abaixo o acesso do método estático ATRAVÉS da classe
+          e com o uso do operador :: (resolução de escopo)  -->
+         <p>Emails enviados: <b><?= NotificadorEmail::getQuantidadeEnviada() ?></b></p>
+         <p>SMS enviados: <b><?= NotificadorSMS::getQuantidadeEnviada() ?></b></p>
+     </section>
 
     <div class="assuntos-estudados">
         <h2>Assuntos estudados</h2>
