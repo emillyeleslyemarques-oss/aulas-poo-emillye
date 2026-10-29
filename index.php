@@ -3,11 +3,18 @@ require_once "src/Notificador.php"; // interface (vem primeiro)
 require_once "src/NotificadorEmail.php"; // classe
 require_once "src/NotificadorSMS.php"; // classe
 
-// Criando os objetos a partir das classes
 $notificadorPorEmail = new NotificadorEmail();
 $notificadorPorSMS = new NotificadorSMS();
 
-$notificadores = [$notificadorPorEmail, $notificadorPorSMS];
+//Pedido 123abc
+$emailPedido1 = $notificadorPorEmail->enviar("Seu pedido 123abc foi confirmado!");
+$smsPedido1 = $notificadorPorSMS->enviar("Seu pedido 123abc foi confirmado!");
+
+//Pedido 789xyz
+$emailPedido2 = $notificadorPorEmail->enviar("Seu pedido 789xyz!");
+
+//Pedido 456asd
+$emailPedido3 = $notificadorPorEmail->enviar("Seu pedido 456asd foi confirmado!");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -29,16 +36,23 @@ $notificadores = [$notificadorPorEmail, $notificadorPorSMS];
 
         <div class="conteudos">        
         
-        <?php 
-            $conteudoDaMensagem = "Seu pedido '123abc' foi confirmado!";
-            foreach($notificadores as $notificador): 
-        ?>
             <article class="card-conteudo">
-                <h2>Notificação sobre o pedido:</h2>
-                <p> <?= $notificador->enviar($conteudoDaMensagem) ?> </p>
+               <h2>Notificações: Pedido 123abc</h2>
+               <p><?= $emailPedido1 ?></p>
+               <p><?= $smsPedido1 ?></p>
             </article>
-        <?php endforeach; ?>
 
+            <article class="card-conteudo">
+                <h2>Notificações: Pedido 789xyz</h2>
+               <p><?= $emailPedido2 ?></p>
+               <p></p>
+            </article>
+
+            <article class="card-conteudo">
+                <h2>Notificações: Pedido 456asd</h2>
+               <p><?= $emailPedido3 ?></p>
+               <p></p>
+            </article>
         </div>
 
         <hr>        
@@ -46,11 +60,7 @@ $notificadores = [$notificadorPorEmail, $notificadorPorSMS];
     <div class="assuntos-estudados">
         <h2>Assuntos estudados</h2>
         <ul>
-            <li>Interface <b>Notificador</b> como um contrato de comportamentos (métodos)</li>
-            <li>Definição do método <b>enviar(string $mensagem): string</b> na Interface</li>
-            <li>Aplicação da interface com <b>implements</b> nas classes <b>NotificadorEmail</b> e <b>NotificadorSMS</b></li>
-            <li>Implementação do método <b>enviar</b> em cada classe</li>
-            <li>Polimorfismo: a mesma chamada a <b>enviar</b> utiliza a implementação de cada classe.</li>
+          
         </ul>
     </div>
 
