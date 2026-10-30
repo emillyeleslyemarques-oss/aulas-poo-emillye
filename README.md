@@ -13,7 +13,7 @@ acessiveis pelo menu de branches no GitHub.
 - Lembrete: use Importa namespace; require_once carrega arquivos
 ---
 ## Branch 08: Enumerações
- - Enumerações com um conjunto definido de opções usando case
+- Enumerações com um conjunto definido de opções usando case
 - Casos associados a valores do tipo string
 - Acesso a um caso com StatusPedido::NomeCaso
 - Acesso ao valor/texto do caso com ->value
