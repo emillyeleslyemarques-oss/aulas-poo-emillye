@@ -69,16 +69,21 @@ $saudacao = new Saudacao();
         <h2>Assuntos estudados</h2>
         
     </div>
-        <ul>
-            <li>Reorganização dos arquivos em pastas dentro de <b>src</b></li>
-            <li>Declaração do namespace e do subnamespace em cada arquivo</li>
-            <li>Utilização do nome completo de um recurso: <b>App\Pedidos\Pedido</b></li>
-            <li>Importação do namespace com <b>use</b> para utilizar nomes simples</li>
-            <li>Criação de apelidos com <b>as</b> para solucionar conflitos de nomes </li>
-            <li>Lembrete:
-                 <b>use</b> Importa namespace;  
-                 <b>require_once</b> carrega arquivos   
-            </li>
+        <ul>  
+            <li>Composer <b>: gerenciador de dependencias para PHP; aqui utilizamos 
+            apenas para serviços de <b>autoload</b></b></li>
+            <li>Configuração do autoload no <b>composer.json</b></li>
+            <li><b>PSR-4</b>: diretriz que determina a relação entre namespace e diretorios
+            para o autoload</li>
+            <li>Mapeamento do namespace <b>App</b> para a pasta <b>src</b></li>
+            <li>Geração do autoload com <b>compuser dump-autoload</b></li>
+            <li>Carregamento do autoload na index.php usando um unico <b>require_once</b>
+            apontando para o <b>vendor/autoload.php</b></li>
+            <li>Teste: criação da classe <b>Saudacao</b> com carregamento automatico via autoload</li>
+            <li><b>compuser install</b>: instala dependencias e gera arquivpos do autoload
+            (desde que voce tenha o compuser.json)</li>
+            <li>Lembrete: a pasta <b>vendor</b> não precisa ser versionada pelo Git. Por 
+            isso, a colocamos no <b>.gitignore</b> </li>
         </ul>
     </div>
 </body>

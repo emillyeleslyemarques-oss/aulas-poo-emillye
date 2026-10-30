@@ -4,6 +4,10 @@ Neste repositorio utilizaremos o PHP com **Programção Orientada a Objetos**
 
 os assuntos e exemplos estão divididos po `branches`,
 acessiveis pelo menu de branches no GitHub.
+
+## Branch 10: Compuser e Autoload
+
+---
  ## Branch 09:Namespace
 - Reorganização dos arquivos em pastas dentro de src
 - Declaração do namespace e do subnamespace em cada arquivo
