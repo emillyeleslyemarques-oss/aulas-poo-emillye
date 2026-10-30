@@ -1,12 +1,20 @@
 <?php 
-require_once "src/StatusPedido.php";
-require_once "src/Pedido.php";
 
-require_once "src/Notificador.php"; // interface (vem primeiro)
-require_once "src/NotificadorEmail.php"; // classe
-require_once "src/NotificadorSMS.php"; // classe
+//Atualizamos os caminhos dos arquivos/pastas
+require_once "src/Pedidos/StatusPedido.php";
+require_once "src/Pedidos/Pedido.php";
 
-$notificadorPorEmail = new NotificadorEmail();
+require_once "src/Notificacoes/Notificador.php"; 
+require_once "src/Notificacoes/NotificadorEmail.php"; 
+require_once "src/Notificacoes/NotificadorSMS.php"; 
+
+use App\Pedidos\StatusPedido;
+use App\Pedidos\Pedido;
+use App\Notificacoes\NotificadorEmail;
+
+// Veja que nessa primeira forma, precisamos passar o nome completo da classe
+$notificadorPorEmail = new App\Notificacoes\NotificadorEmail();
+
 
 $pedido1 = new Pedido(1001, "Fulano da Silva", StatusPedido::Pendente);
 $pedido2 = new Pedido(1002, "Beltrano Souza", StatusPedido::Pendente);
