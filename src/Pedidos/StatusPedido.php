@@ -1,7 +1,6 @@
 <?php
-/* Cada case representa um status permitido e possui um
-valor/texto associado, que voce pode escrever como quiser
-(acentos, espaços, cedilha) */
+
+namespace App\Pedidos;
 enum StatusPedido: string 
 {
     case Pendente = "Pendente";
