@@ -27,13 +27,27 @@ acessiveis pelo menu de branches no GitHub.
 - Diferença entre usar recursos estaticos de classe e  recursos de objeto
 ---
 ## Branch 06:
-
+- Interface notificador como um contrato de comportamentos (metodos)
+- Definição do metodo enviar(string $mensagem): string na interface
+- Aplicação de interface com implementes nas classes NotificadorEmail e NotificadorSMS
+- Implementação do metodo enviar em cada classe
+- Polimorfismo: a mesma chamada a enviar utiliza a implementação de cada classe.
 ---
 ## Branch 05:
-
+- Classe abstrata: conteudo
+- Impossibilidade de instanciardiretamente uma classe abstrata
+- Metodo abstrato: getDescricao()
+- Obriga a implementação do metodo abstrato pelas classes filhas Filme e Serie.
+- Polimorfismo: a mesma chamada e getDescricaoutiliza a implantacao de cada classe
 ---
  ## Branch 04: Herança
-
+ - Classe-pai (superclasse): Conteudo
+ - Classe-filha (subclasse): Filme e Serie
+ - Herança utilizando extends
+ - Herança com propriedades e métodos
+ - Visibilidade protected na superclasse permitindo o acesso atraés das subclasses.
+ - Construtor da superclasse parent::__construct()
+ - Propriedades específicas das subclasses
 ---
 ## Branch 03: Método construtor
 - finalidade do construtor
