@@ -7,15 +7,9 @@ use App\Relatorios\Pedido as RelatorioPedido;
 
 use App\Pedidos\StatusPedido;
 
-
-
-
-//Atualizamos os caminhos dos arquivos/pastas
-require_once "src/Relatorios/Pedido.php";
-require_once "src/Pedidos/StatusPedido.php";
-require_once "src/Pedidos/Pedido.php";
-require_once "src/Notificacoes/Notificador.php"; 
-require_once "src/Notificacoes/NotificadorEmail.php"; 
+//susbstituindo todos os requires manuais de cada arquivo
+//Classe, interface, enum por UM UNICO require apontando para o autoload
+require_once "vendor/autoload.php";
 
 // Veja que nessa primeira forma, precisamos passar o nome completo da classe
 $notificadorPorEmail = new App\Notificacoes\NotificadorEmail();
