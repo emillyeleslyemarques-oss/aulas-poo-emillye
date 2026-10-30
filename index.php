@@ -1,4 +1,9 @@
 <?php 
+/* Nesta segunda forma, basta indicar o uso do recurso atraves do namespace */
+use App\Pedidos\Pedido;
+use App\Pedidos\StatusPedido;
+
+
 
 //Atualizamos os caminhos dos arquivos/pastas
 require_once "src/Pedidos/StatusPedido.php";
@@ -8,9 +13,7 @@ require_once "src/Notificacoes/Notificador.php";
 require_once "src/Notificacoes/NotificadorEmail.php"; 
 require_once "src/Notificacoes/NotificadorSMS.php"; 
 
-use App\Pedidos\StatusPedido;
-use App\Pedidos\Pedido;
-use App\Notificacoes\NotificadorEmail;
+
 
 // Veja que nessa primeira forma, precisamos passar o nome completo da classe
 $notificadorPorEmail = new App\Notificacoes\NotificadorEmail();
