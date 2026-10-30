@@ -1,4 +1,7 @@
 <?php
 namespace App\Relatorios;
 
-class Pedido {}
+class Pedido 
+{
+   
+}

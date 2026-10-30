@@ -1,19 +1,21 @@
 <?php 
 /* Nesta segunda forma, basta indicar o uso do recurso atraves do namespace */
 use App\Pedidos\Pedido;
+
+//repare que aqui definimos um apelido (as) para solucionar o conflito de nomes de classe
+use App\Relatorios\Pedido as RelatorioPedido;
+
 use App\Pedidos\StatusPedido;
 
 
 
+
 //Atualizamos os caminhos dos arquivos/pastas
+require_once "src/Relatorios/Pedido.php";
 require_once "src/Pedidos/StatusPedido.php";
 require_once "src/Pedidos/Pedido.php";
-
 require_once "src/Notificacoes/Notificador.php"; 
 require_once "src/Notificacoes/NotificadorEmail.php"; 
-require_once "src/Notificacoes/NotificadorSMS.php"; 
-
-
 
 // Veja que nessa primeira forma, precisamos passar o nome completo da classe
 $notificadorPorEmail = new App\Notificacoes\NotificadorEmail();
@@ -26,6 +28,9 @@ $pedido4 = new Pedido(1004, "Mônica Santos", StatusPedido::SaiuParaEntrega);
 $pedido3->setStatus(StatusPedido::Pago);
 
 $pedidos = [$pedido1, $pedido2, $pedido3, $pedido4];
+
+//criando um objeto a partir da classe Pedido do subnamespace Relatorios
+$relatorioPedido = new RelatorioPedido();  //repare que usamos o apelido em vez do nome real
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
