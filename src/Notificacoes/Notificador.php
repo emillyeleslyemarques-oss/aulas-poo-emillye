@@ -1,11 +1,9 @@
 <?php
-/* A Interface define os métodos que cada classe DEVE implementar
-obrigatoriamente. Podemos dizer que Interface é como um Contrato, em
-que as assinaturas (métodos) deverão ser honradas. 
 
-Usamos a Interface para garantir que todas as classes que a utilizem,
-sigam um mesmo padrão definido nos métodos. Ainda assim, cada classe poderá
-ter uma implementação diferente no corpo do método (polimorfismo). */
+//Namespace principal/raiz: App (pode ser qualquer nome)
+//Seguido de \ e o noime do subnamespace (nome da pasta)
+namespace App\Notificacoes;
+
 
 interface Notificador
 {
