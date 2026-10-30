@@ -1,11 +1,8 @@
 <?php 
-/* Nesta segunda forma, basta indicar o uso do recurso atraves do namespace */
 use App\Pedidos\Pedido;
-
-//repare que aqui definimos um apelido (as) para solucionar o conflito de nomes de classe
 use App\Relatorios\Pedido as RelatorioPedido;
-
 use App\Pedidos\StatusPedido;
+use App\Saudacao;
 
 //susbstituindo todos os requires manuais de cada arquivo
 //Classe, interface, enum por UM UNICO require apontando para o autoload
@@ -23,8 +20,10 @@ $pedido3->setStatus(StatusPedido::Pago);
 
 $pedidos = [$pedido1, $pedido2, $pedido3, $pedido4];
 
-//criando um objeto a partir da classe Pedido do subnamespace Relatorios
-$relatorioPedido = new RelatorioPedido();  //repare que usamos o apelido em vez do nome real
+
+$relatorioPedido = new RelatorioPedido(); 
+
+$saudacao = new Saudacao();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -43,6 +42,7 @@ $relatorioPedido = new RelatorioPedido();  //repare que usamos o apelido em vez 
             <h1>Pedidos da loja virtual</h1>
             <p>Cada pedido possui um status: Pendente, Aguardando pagamento, Em preparação,
             Pago ou Saiu para entrega.</p>
+            <p>Testando a Saudacao: <?= $saudacao->cumprimentar() ?></p>
         </header>
 
         <div class="conteudos">        
